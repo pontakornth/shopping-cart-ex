@@ -24,7 +24,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@fortawesome/fontawesome-free/css/fontawesome.min.css',
+    '@fortawesome/fontawesome-free/css/solid.min.css'
+  ],
 
   /*
    ** Plugins to load before mounting the App
