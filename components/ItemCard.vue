@@ -24,7 +24,7 @@
         </div>
         <div class="card-footer-item">
           <span>
-            <button class="button is-primary">
+            <button class="button is-primary" @click="addItemToCart(item)">
               <b-icon pack="fas" icon="cart-plus" />
               <span>
                 Add to cart
@@ -38,12 +38,18 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   props: {
     item: {
       type: Object,
       required: true
     }
+  },
+  methods: {
+    ...mapActions({
+      addItemToCart: 'addItemToCart'
+    })
   }
 }
 </script>
