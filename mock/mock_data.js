@@ -9,7 +9,7 @@ module.exports = () => {
           name: faker.commerce.productName(),
           price: faker.commerce.price(),
           imageUrl: faker.image.image(),
-          description: faker.lorem.paragraph()
+          description: faker.lorem.sentence()
         }
       })
   }
