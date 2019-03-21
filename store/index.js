@@ -45,5 +45,11 @@ export const actions = {
   },
   clearCart({ commit }) {
     commit('clearCart')
+  },
+  async fetchItems({ commit }, page) {
+    const items = await this.$axios.get(
+      `http://localhost:7777/items?_page=${page}&_limit=9`
+    )
+    commit('setStock', { items: items.data })
   }
 }

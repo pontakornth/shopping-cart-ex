@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column is-8">
         <div class="columns is-mobile">
-          <shop-view :items="shopItems" />
+          <shop-view />
         </div>
       </div>
       <div class="column is-4">
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 import ShopView from '@/components/ShopView'
 import Cart from '@/components/Cart'
 
@@ -25,12 +25,8 @@ export default {
     ShopView,
     Cart
   },
-  asyncData({ store }) {
-    return axios.get('http://localhost:7777/items').then(res => {
-      return {
-        shopItems: res.data
-      }
-    })
+  async asyncData({ store }) {
+    await store.dispatch('fetchItems', 1)
   }
 }
 </script>
