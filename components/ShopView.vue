@@ -9,7 +9,7 @@
           :total="99"
           :current.sync="page"
           :per-page="9"
-          :change="changePage(page)"
+          @change="changePage"
         />
       </div>
     </div>
@@ -43,8 +43,8 @@ export default {
     ...mapActions({
       fetchItems: 'fetchItems'
     }),
-    changePage(page) {
-      this.fetchItems(page)
+    async changePage(value) {
+      await this.fetchItems(value)
     }
   }
 }
