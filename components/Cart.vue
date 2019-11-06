@@ -39,7 +39,7 @@
             </div>
             <div class="level-right">
               <div class="level-item">
-                <a class="button is-medium is-info">
+                <a class="button is-medium is-info" @click="clearCart">
                   <b-icon pack="fas" size="is-small" icon="shopping-cart" />
                   <span>Clear cart</span>
                 </a>
@@ -64,7 +64,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      removeItemFromCart: 'removeItemFromCart'
+      removeItemFromCart: 'removeItemFromCart',
+      clearCart: 'clearCart'
     })
   }
 }

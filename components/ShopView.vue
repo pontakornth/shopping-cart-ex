@@ -3,16 +3,6 @@
     <div class="columns is-multiline">
       <item-card v-for="item in stock" :key="item.id" :item="item" />
     </div>
-    <div class="level">
-      <div class="level-item">
-        <b-pagination
-          :total="99"
-          :current.sync="page"
-          :per-page="9"
-          @change="changePage"
-        />
-      </div>
-    </div>
   </div>
 </template>
 
