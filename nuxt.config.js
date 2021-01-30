@@ -2,7 +2,7 @@ import pkg from './package'
 
 const newLocal = 'image/x-icon'
 export default {
-  mode: 'spa',
+  mode: 'static',
 
   /*
    ** Headers of the page
